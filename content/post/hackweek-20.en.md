@@ -3,7 +3,8 @@ title = "Hackweek 20"
 date = "2021-03-26"
 +++
 
-## Rancher maintains 2 Kubernetes distribution, both production grade:
+Rancher maintains 2 Kubernetes distribution, both production grade:
+
  * k3s: Single binary containing containerd backend. Can be run as
    server or agent on each node of cluster. SQLite is used by default
    instead of ETCD. MySQL and Postgres also supported.
