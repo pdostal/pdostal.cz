@@ -20,10 +20,9 @@ Second of all, my goal is to keep my setup as simple as possible and focus as mu
 as possible on writing. That means, that I of course need CI / CD setup and as I
 see no point of hosting my own Git server, I use GitHub and their GitHub Actions:
 
-## GitHub
+## .github/workflows/main.yml
 
 ```
-$ cat .github/workflows/main.yml
 name: CI
 on: push
 jobs:
@@ -92,4 +91,4 @@ This setup automates the building and publishing process of my site. After each 
 expect a directory in `/var/www/pdostal.cz/public/` containg up-to-date version of my site.
 
 I plan to show you also the setup of my NGINX web server and the way I use `certbot` Let's
-Encrypt client, but this will be separate article which I will link here.
+Encrypt client, but this will be separate article which I will link here later.
