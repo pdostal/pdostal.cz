@@ -1,0 +1,26 @@
+[hello]
+other = "Pavel Dostál"
+[contacts]
+other = "Contacts"
+[databox]
+other = "Data box"
+[personal]
+other = "Personal"
+[business]
+other = "Business"
+[ico]
+other = "CRN"
+[post]
+other = "Post"
+[finance]
+other = "Finance"
+[work_and_projects]
+other = "Work and projects"
+[in]
+other = "in"
+[links]
+other = "Links"
+[social_networks]
+other = "Social networks"
+[public_keys]
+other = "Public keys"

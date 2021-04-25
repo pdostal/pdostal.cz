@@ -1,0 +1,26 @@
+[hello]
+other = "Pavel Dostál"
+[contacts]
+other = "Kontakty"
+[databox]
+other = "datová schránka"
+[personal]
+other = "Osobní"
+[business]
+other = "Živnost"
+[ico]
+other = "IČO"
+[post]
+other = "Pošta"
+[finance]
+other = "Finanční spojení"
+[work_and_projects]
+other = "Práce a projekty"
+[in]
+other = "v"
+[links]
+other = "Odkazy"
+[social_networks]
+other = "Sociální sítě"
+[public_keys]
+other = "Veřejné klíče"
