@@ -1,9 +1,12 @@
-+++
-title = "Matomo docker-compose deployment"
-date = "2021-04-25"
-+++
+---
+title: Matomo docker-compose deployment
+date: 2021-04-25
+tags:
+  - linux
+---
 
 As I still didn't deploy Kubernetes on my personal server, I introduce you my Docker(-Compose) setup:
+
 <!--more-->
 
 ```

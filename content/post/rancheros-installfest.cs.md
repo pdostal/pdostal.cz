@@ -1,11 +1,12 @@
-+++
-title = "RancherOS"
-date = "2021-03-06"
-description = "This video is voice over of my slides and demos about the RancherOS and k3OS operating systems from Rancher Labs."
-tags = [
-    "presentation"
-]
-+++
+---
+title: RancherOS InstallFest přednáška
+date: 2021-03-06
+tags:
+  - přednášky
+  - linux
+---
+
+Letos jsem měl na InstallFestu přednášku o operačním systému RancherOS. Video je zde:
 
 <!--more-->
 

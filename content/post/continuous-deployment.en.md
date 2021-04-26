@@ -1,7 +1,9 @@
-+++
-title = "Continuous deployment"
-date = "2021-04-25"
-+++
+---
+title: Continuous deployment
+date: 2021-04-25
+tags:
+  - linux
+---
 
 After trying to to deploy to GitLab Pages and GitHub Pages I decided to deploy
 to my own server as neither of those providers fit my needs, because:

@@ -1,7 +1,9 @@
-+++
-title = "Hackweek 20"
-date = "2021-03-26"
-+++
+---
+title: Hackweek 20
+date: 2021-03-26
+tags:
+  - linux
+---
 
 Nedávno proběhl dvacátý [SUSE Hack Week](https://hackweek.suse.com)
 a já si konečně našel čas na nasazení Kubernetes pomocí dvou nástrojů
