@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/pdostal
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://pdostal.cz
+  * I am pdostal (https://keybase.io/pdostal) on keybase.
+  * I have a public key with fingerprint CEC9 A9AA B7F6 9CE8 4136  D67A 65BD CDAB 7097 4BA9
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101822a433111708b25ac49d76147b42b0a2f2bfb8cc94666178b7a33e8157d78dc0a",
+            "fingerprint": "cec9a9aab7f69ce84136d67a65bdcdab70974ba9",
+            "host": "keybase.io",
+            "key_id": "65bdcdab70974ba9",
+            "kid": "0101822a433111708b25ac49d76147b42b0a2f2bfb8cc94666178b7a33e8157d78dc0a",
+            "uid": "22ab6be6084422a7f86d5d47e0332c00",
+            "username": "pdostal"
+        },
+        "revoke": {
+            "sig_ids": [
+                "81b5d19f6dc22a525fb6647176f76149165dc5e935bcfccf22d99dfe4b959b4b0f"
+            ]
+        },
+        "service": {
+            "hostname": "pdostal.cz",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1481348737,
+    "expire_in": 157680000,
+    "prev": "4e41e04d06f7407d6618989e17e4e6a64c9d449d45dc3b9309c4c5fb8a321db1",
+    "seqno": 31,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.60
+Comment: https://keybase.io/crypto
+
+yMN+AnicrZJrTFRHFMcXiojbUrABDOlDeqml4krvY/Y+NiYlFEwJWhNSqVR0e+fe
+uXB57JuXBMrjA1gV3KI2FCNYHoo0Nb6o1ZiC2FgW5NEisCkpxLa0RahdIJpCgM6S
+9kOTfux8mZmT//md/zkzdwKf0mh90K177ZaPk9p8ers8uZp9SafKigholgsJQxGR
+hdY2lC0ju8OYpcqEgSApkuJpWgQMQ1EUR/KQ1osSEGSOpQAHAQ1JkVZoqEBekgTA
+sizF8ZATGQbxlJ6TOV6WSJHQEYpqSkc2i001OTBWQpIgCqIIOYUVJMQDimFllhNZ
+PZQlGYdJgQNQFHBihtnuzcDmoGhHMaoZx/DFuGbvP/T/s+/cNRwmQRYiluQBwGdO
+4VlZLwMOkQxDSyTpFdqRzSTmIKy2yNizmE0U6wgbyjNnIe9Y7Wo69mwnDPsJnoJ6
+mRIUVpYwTE/rFciygKM4VvHaEyhWL0t6JDB6KCmSpNC0LAiyggAU9AIEkFSIA5iN
+C+ap0hrcO6R/F4+RDmFTFpvZYZbM2Tie4XBY7AavJ0ehxSvMR9D4N8IIVZOMHwhn
+5CGbXTWbCAOFlZJD9TIpwFMM4DmG0xGowKLakFH1KvQcy5N4eeugPIwECFCIBDKJ
+GwEkJ+Op8gIvIIpDALEiCyRBBvgRAO6PgQJDChKQcPe8yNCUDCnC25TVZCYMDIV9
+iumYiedmEh25NkQU3+5K89P4aDX+63y9P1ej3RD8z392PROsaVY7ekvy427en3MJ
+1n5dVPHch9cPBl5Ylc581+Qe8o2ujPzmdMnWwPrM/vj5sDeb7OFkje2P6Mt2Q0Rn
+C3vRc7fgoDXlVunewcZzGW98Vb4juXnJqc0YTn6SNfPptju7FvNfO3OvfktA6RIa
+VorN2yI4xR1QnXnp8LDLWVxe+FNdW+fyzzFV6sYPaqfG1ued7bnrnB4tcfomsYl0
+zrubmzwhj8SRyl+2BJ4I2x4nLoUswucTD1fFdpSR4W/tEV0F9dMLNT19DY9XPutK
+PT4e8WBRa32a3vjbNc+md0wJHiksrqgHBMXMw+SynoDQvpcnY2V/3dW4xcEaJxou
+6npwpS51/EhNmaQ4u09+W94w8XqQ/8P5SwnRusnS4IVea+TlJz5Wn/c+72xtqZx9
+daHAMdM6PpKy89ndZ1vya28/RHtc2aYUx4R74EfwUWt3w87W/IYJjyu+emjHvlHt
+SseuXzd3T5bdN1awF4/SCv9F+/L6VXdT3ZeJQ57cpfPLJ9+fv84WPnrx6EB8RWj7
+qWvaoNrZdVm/1x2Zqok6dCPnh62TUyt+/NTb4/V0Y2Lz4gtzUQkjfk1tx240lh/j
+Z2arU0Pn5r/fNBq7/URIwG6mpK+it9Sdtn/w3JU/vw4/kD3OpjXvHZg+fXXpfNWF
+l0Yip92ZbYmvjJmIqE8eM/1jN4cNq3UbnuMb/wL3VewB
+=4q0F
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pdostal
+
+==================================================================
+
