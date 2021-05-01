@@ -9,6 +9,14 @@ As I still didn't deploy Kubernetes on my personal server, I introduce you my Do
 
 <!--more-->
 
+First of all we need to install both the `docker` and the `docker-compose` utility:
+```
+zypper in docker python3-docker-compose
+```
+
+## Container deployment
+
+We must create a directory for our `docker-compose.yml` and some Matomo specific configuration files:
 ```
 # mkdir -p /var/www/matomo/; cd /var/www/matomo/
 # wget https://raw.githubusercontent.com/matomo-org/docker/master/.examples/nginx/docker-compose.yml 
@@ -16,6 +24,10 @@ As I still didn't deploy Kubernetes on my personal server, I introduce you my Do
 # wget https://raw.githubusercontent.com/matomo-org/docker/master/.examples/nginx/db.env
 # edit db.env # Put random value for MYSQL_PASSWORD and the same for MATOMO_DATABASE_PASSWORD
 # edit docker-compose.yml # Put random value for MYSQL_ROOT_PASSWORD
+```
+
+After we have the configuration ready we can start the whole setup:
+```
 # docker-compose up -d
 Creating matomo_web_1 ... done
 Creating matomo_db_1  ... done
@@ -26,7 +38,7 @@ When all containers are running we can connect to our machine on port 8080 and s
 
 ## Proxy
 It is recommended to put the instance behind a proxy server such as HAProxy or NGINX.
-I plan to write an article about my NGINX setup later and I will link it here as well.
+I wrote [blog post]({{< ref "nginx-certbot" >}}) exmplaing how to setup NGINX for this.
 
 ## Hugo integration - Harbor theme
 

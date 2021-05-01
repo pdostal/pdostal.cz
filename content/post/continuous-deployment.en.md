@@ -92,5 +92,5 @@ Now we know all of our secrets which we need to add to GitHub Settings Secrets s
 This setup automates the building and publishing process of my site. After each push I can
 expect a directory in `/var/www/pdostal.cz/public/` containg up-to-date version of my site.
 
-I plan to show you also the setup of my NGINX web server and the way I use `certbot` Let's
-Encrypt client, but this will be separate article which I will link here later.
+I wrote a [blog post]({{< ref "nginx-certbot" >}}) about my Nginx and Certbot setup which
+I use to host this site.
