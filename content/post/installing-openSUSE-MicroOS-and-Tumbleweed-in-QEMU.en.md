@@ -5,7 +5,7 @@ tags:
   - linux
 ---
 
-This is step by step guide for installing openSUSE MicroOS in QEMU.
+This is a step by step guide for installing openSUSE MicroOS within QEMU.
 This can be easy to customize or automate. It may help you on other platforms too.
 
 <!--more-->
@@ -15,7 +15,7 @@ This can be easy to customize or automate. It may help you on other platforms to
     ```
     # curl https://download.opensuse.org/tumbleweed/appliances/openSUSE-MicroOS.x86_64-kvm-and-xen.qcow2 -o microos1.qcow2
     ```
- 2) Save Combustion script as: `/mnt/combustion/combustion/script`:
+ 2) Create your combustion script on your local computer as: `/mnt/combustion/combustion/script` 
     ```
     #!/bin/bash
     # combustion: network
@@ -39,7 +39,7 @@ This can be easy to customize or automate. It may help you on other platforms to
     # Leave a marker
     echo "Configured with combustion" > /etc/issue.d/combustion
     ```
- 3) If you install on real hardware or other hypervizor, you need to create Combustion disk image.
+ 3) If you install MicroOS on real hardware or other hypervisor, you need to create a Combustion disk image.
     ```
     # dd if=/dev/zero of=/dev/sdX  bs=1M  count=10
     # mkfs.ext4 -F /dev/sdX -L combustion
@@ -47,7 +47,7 @@ This can be easy to customize or automate. It may help you on other platforms to
     # mount /dev/sdX /mnt/combustion
     # mkdir /mnt/combustion/combustion
     ```
-    Please use something like `/tmp/combustion.img` instead of `/dev/sdX` in case you install on another hypervizor.
+    Please use something like `/tmp/combustion.img` instead of `/dev/sdX` in case you install on another hypervisor.
  4) Create the QEMU VM:
     ```
     # I=01; virt-install --boot hd -n microos$I --os-type=Linux --os-variant=opensusetumbleweed --network network=default,mac=52:54:00:f2:fb:$I --ram=4096 --vcpus=4 --disk path=microos$I.qcow2 --noautoconsole --graphics vnc,listen=0.0.0.0,port=59$I --qemu-commandline="-fw_cfg name=opt/org.opensuse.combustion/script,file=/var/lib/libvirt/images/combustion"
@@ -58,16 +58,18 @@ This can be easy to customize or automate. It may help you on other platforms to
 ```
 # virt-install -n tumbleweed --os-variant=opensusetumbleweed --network network=default,mac=52:54:00:f2:fb:67 --ram=8192 --vcpus=4 --disk path=tumbleweed.qcow2,size=40 --location http://download.opensuse.org/tumbleweed/repo/oss/ --extra-args 'autoyast=https://pdostal.sh.cvut.cz/autoyast.xml' --noautoconsole --graphics vnc,listen=0.0.0.0,port=5900
 ```
-We can use standard openSUSE Tumbleweed URL or path to ISO image and MicroOS AutoYAST profile (available in resources):
+We can use the standard openSUSE Tumbleweed URL or path to ISO image and MicroOS AutoYAST profile (available in resources):
 
 If you wanna boot from PXE then the `kernel` and `initrd` files are in the same location under `boot/x86_64/loader/` path.
 
-## Serial console installation
+## Serial console installation with UEFI and secure boot enabled
 ```
-virt-install -n tumbleweed --os-variant=opensusetumbleweed --network network=default,mac=52:54:00:f2:fb:67 --ram=8192 --vcpus=4 --disk path=tumbleweed.qcow2,size=40 --nographics --location http://download.opensuse.org/tumbleweed/repo/oss/ --extra-args "console=ttyS0,115200 textmode=1"
+# virt-install -n tumbleweed --os-variant=opensusetumbleweed --network network=default,mac=52:54:00:f2:fb:67 --ram=8192 --vcpus=4 --disk path=tumbleweed.qcow2,size=40 --nographics --location http://download.opensuse.org/tumbleweed/repo/oss/ --extra-args "console=ttyS0,115200 textmode=1" --boot uefi,loader_secure=yes
 ```
 
 There are two magical boot parameters: `console=ttyS0,115200` which outputs the console to the serial terminal and `textmode=1` which spawns the YaST in the text mode. Let's also add `--nographics` as we don't really need it.
+
+To enable UEFI and secureboot please use the `--boot uefi,loader_secure=yes` parameter. With this option openSUSE can also be installed with trusted boot enabled.
 
 ## Removal
 ```
@@ -77,7 +79,7 @@ rm microos1.qcow2 # Remove the system image
 ```
 
 ## Resources:
- * [the openSUSE porta](https://en.opensuse.org/Portal:MicroOS/Downloads)
+ * [the openSUSE portal](https://en.opensuse.org/Portal:MicroOS/Downloads)
  * [openSUSE Portal/MicroOS/Combustion](https://en.opensuse.org/Portal:MicroOS/Combustion)
  * [MicroOS autoYAST profile](/microos-autoyast.xml)
 
