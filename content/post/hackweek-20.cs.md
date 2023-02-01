@@ -3,6 +3,7 @@ title: Hackweek 20
 date: 2021-03-26
 tags:
   - linux
+  - hackweek
 ---
 
 Nedávno proběhl dvacátý [SUSE Hack Week](https://hackweek.suse.com)

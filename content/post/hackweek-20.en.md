@@ -3,6 +3,7 @@ title: Hackweek 20
 date: 2021-03-26
 tags:
   - linux
+  - hackweek
 ---
 
 Rancher maintains 2 Kubernetes distribution, both production grade:
