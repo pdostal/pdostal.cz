@@ -3,6 +3,7 @@ title: The OBSs & SCM integration
 date: 2023-01-30
 tags:
   - linux
+  - hackweek
 ---
 
 This post will be about continuous integration between [Open Build Service] and [GitHub].
@@ -63,7 +64,7 @@ The correspondig `_service`:
     <param name="versionformat">@PARENT_TAG@.%h</param>
     <param name="versionrewrite-pattern">v(.*)</param>
   </service>
-  <service name="set_version"/>
+  <service name="set_version" mode="buildtime"/>
   <service name="tar" mode="buildtime"/>
 </services>
 ```
@@ -86,3 +87,4 @@ You can see the recent events as well as it's Artifacts in "My profile" -> Token
 ## Sources:
  * [Open Build Service Blog - Continuous Integration with OBS and GitHub/GitLab](https://openbuildservice.org/2021/05/31/scm-integration/)
  * [Open Build Service Manual -  SCM/CI Workflow Integration](https://openbuildservice.org/help/manuals/obs-user-guide/cha.obs.scm_ci_workflow_integration.html)
+ * [The Hackweek project](https://hackweek.opensuse.org/all/projects/explore-the-integration-between-obs-and-github)
