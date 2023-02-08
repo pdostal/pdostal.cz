@@ -1,6 +1,20 @@
+---
 name: CI
-on: push
+on: ["push"]
 jobs:
+  linters:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@v3
+
+      - name: Lint Code Base
+        uses: docker://avtodev/markdown-lint:v1
+        with:
+          args: "**/*.md"
   deploy:
     runs-on: ubuntu-18.04
     steps:
