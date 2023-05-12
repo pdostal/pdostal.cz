@@ -27,6 +27,26 @@ The solution is custom `/etc/docker/daemon.json` file:
 
 By default `docker-compose` creates dedicated network for each project.
 Addressing of those dedicated networks is again under `172.17.0.0/16` prefix.
+
+### New solution
+
+As mentioned on [docker/compose#4336](https://github.com/docker/compose/issues/4336#issuecomment-457326123)
+we can instruct Docker which prefix should those additional networks use:
+
+```yaml
+# cat ~/.docker/daemon.json
+{
+  "debug" : true,
+  "default-address-pools" : [
+    {
+      "base" : "172.31.0.0/16",
+      "size" : 24
+    }
+  ]
+}
+```
+
+### Previous solution
 This problem is fixable by forsing each service in our project to joing the
 default network:
 
