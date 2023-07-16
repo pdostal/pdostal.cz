@@ -39,7 +39,7 @@ we can instruct Docker which prefix should those additional networks use:
   "debug" : true,
   "default-address-pools" : [
     {
-      "base" : "172.31.0.0/16",
+      "base" : "100.64.0.0/16",
       "size" : 24
     }
   ]
