@@ -71,6 +71,8 @@ There are two magical boot parameters: `console=ttyS0,115200` which outputs the 
 
 To enable UEFI and secureboot please use the `--boot uefi,loader_secure=yes` parameter. With this option openSUSE can also be installed with trusted boot enabled.
 
+To install openSUSE Leap instead use `http://download.opensuse.org/distribution/leap/15.5/repo/oss/` as `--location` parameter.
+
 ## Removal
 ```
 virsh destroy microos1 # Stop the VM
