@@ -54,11 +54,11 @@ This can be easy to customize or automate. It may help you on other platforms to
     ```
  5) The VM can be accessed over the SSH, by `virsh console microos01` or via VNC.
 
-## Installing from the network via autoYAST
+## Installing Tumbleweed or MicroOS from the network via autoYAST
 ```
-# virt-install -n tumbleweed --os-variant=opensusetumbleweed --network network=default,mac=52:54:00:f2:fb:67 --ram=8192 --vcpus=4 --disk path=tumbleweed.qcow2,size=40 --location http://download.opensuse.org/tumbleweed/repo/oss/ --extra-args 'autoyast=https://pdostal.sh.cvut.cz/autoyast.xml' --noautoconsole --graphics vnc,listen=0.0.0.0,port=5900
+# virt-install -n microos --os-variant=opensusetumbleweed --network network=default --ram=8192 --vcpus=4 --disk path=microos.qcow2,size=40 --location http://download.opensuse.org/tumbleweed/repo/oss/ --extra-args 'autoyast=https://pdostal.cz/microos-autoyast.xml' --nographics --extra-args "console=ttyS0,115200 textmode=1" --boot uefi
 ```
-We can use the standard openSUSE Tumbleweed URL or path to ISO image and MicroOS AutoYAST profile (available in resources):
+The above example installs MicroOS but when switching or skipping the autoyast profile we can install Tumbleweed as well.
 
 If you wanna boot from PXE then the `kernel` and `initrd` files are in the same location under `boot/x86_64/loader/` path.
 

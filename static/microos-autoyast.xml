@@ -112,7 +112,6 @@
     <default_target>multi-user</default_target>
     <services>
       <disable config:type="list">
-        <service>purge-kernels</service>
       </disable>
       <enable config:type="list">
         <service>sshd</service>
