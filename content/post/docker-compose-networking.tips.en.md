@@ -47,8 +47,7 @@ we can instruct Docker which prefix should those additional networks use:
 ```
 
 ### Previous solution
-This problem is fixable by forsing each service in our project to joing the
-default network:
+This problem is fixable by forcing each service in our project to join the default network:
 
 ```yaml
 version: "3.1"

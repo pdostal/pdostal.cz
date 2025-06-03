@@ -23,7 +23,7 @@ But it can also monitor the output of shell commands and with it's built-in Filt
 
 As it's Python open source tool, it can be installed via pretty much every package manager, f.e. `sudo zypper in urlwatch` will do the job on openSUSE.
 
-After installing the package you need to create `~/.config/urlwatch/urlwatch.yaml` configuration file. Here is simple example:
+After installing the package you need to create `~/.config/urlwatch/urlwatch.yaml` configuration file. Here is a simple example:
 
 ```yaml
 display:
