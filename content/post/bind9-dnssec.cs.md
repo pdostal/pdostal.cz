@@ -1,11 +1,13 @@
 ---
-title: Odstranění starý DNSSEC klíčů na serveru bind9
+title: Odstranění starých DNSSEC klíčů na serveru bind9
 date: 2024-02-16
 tags:
   - linux
 ---
 
 Dodatek k článku [DNSSEC s BIND 9.9 snadno a rychle](https://www.root.cz/clanky/dnssec-s-bind-9-9-snadno-a-rychle/) od Ondry Caletky, který vyšel na serveru [root.cz](https://root.cz/).
+
+<!--more-->
 
 V Listopadu jsem vygeneroval nový ECDSA klíč a správce domény aktualizoval DS záznam u CZ NICu, ale ani v Únoru staré RSA klíče nezmizeli, viz:
 
