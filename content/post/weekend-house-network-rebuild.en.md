@@ -5,7 +5,7 @@ tags:
   - network
 ---
 
-Last Wednesday me and my friend Ondra did significant refresh to our weekend house network.
+Last Wednesday, my friend Ondra and I performed a significant refresh of our weekend house network.
 
 The objectives were:
 1. Connect two building by a fibre link
