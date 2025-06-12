@@ -15,7 +15,7 @@ The objectives were:
 The further objectives are:
 4. Segment the network into multiple VLANs - reassign the existing networking and IoT devices
 5. Replace the old SSIDs with a single SSID to enable seamless roaming across the property
-6. Setup a new firewall rules to secure the infrastructure and allow only the necessary traffic
+6. Set up new firewall rules to secure the infrastructure and allow only the necessary traffic
 
 <!--more-->
 
