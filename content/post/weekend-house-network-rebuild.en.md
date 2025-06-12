@@ -8,7 +8,7 @@ tags:
 Last Wednesday, my friend Ondra and I performed a significant refresh of our weekend house network.
 
 The objectives were:
-1. Connect two building by a fibre link
+1. Connect two buildings with a fibre link
 2. Install LTE dish to provide better Internet connectivity
 3. Install security cameras so the driveway and the parking lot are monitored
 
