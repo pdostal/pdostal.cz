@@ -5,17 +5,43 @@ tags:
   - network
 ---
 
-minulou středu jsme s kamarádem Ondrou zásadně obnovili síť na naší chalupě.
+Last Wednesday, my friend Ondra and I performed a significant refresh of our weekend house network.
 
-Seznam úkolů na tento den:
-1. Propojit naše dva domy optickým kabelem
-2. Nainstalovat LTE parabolu a tím vyřešit problém s rychlostí do Internetu
-3. Namontovat kamery na parkoviště a příjezdovou cestu
+The objectives were:
+1. Connect two buildings with a fibre link
+2. Install an LTE dish to provide better Internet connectivity
 
-Další úkoly na později jsou:
-4. Rozsegmentovat síť do několika VLAN. Přerozdělit adresy existujícím sítovým a IoT zařízením
-5. Nahradit stará SSID jedním novým tak, aby klienti mohli volně přecházet všude kolem
-6. Nastavit nová bezpečnostní pravidla na firewallu
+The further objectives are:
+4. Segment the network into multiple VLANs and reassign the existing networking and IoT devices
+5. Replace the old SSIDs with a single SSID to enable seamless roaming across the property
+6. Set up new firewall rules to secure the infrastructure and allow only the necessary traffic
 
 <!--more-->
 
+## The fibre link
+The buildings are only 5 meters apart, so we used a ready-made single-mode armored cable. There are anchors on each wall to allow the cable some space to move. We installed it as high as possible, making it nearly invisible and safe from tall vehicles.
+
+In the small building, the cable runs comfortably around the walls to the Mikrotik SR-10U rack, where it's connected to the Mikrotik RB5009 main router. There is enough space to comfortably service the equipment, plus the main LTE uplink is also located here.
+
+In the bigger building, the cable is attached to the beam and later fished through a conduit to a small in-wall utility box where the Mikrotik CRS112 and CSS610 are located.
+
+## Internet connectivity
+Previously, we were connected by 5GHz ac link from locally present big ISP, but due to our remote location, the maximum speed they offer for end users is 30/3 Mbps. The whole village is conntected by 60G link So we were hunting for other options, and so far there are three:
+
+1) Business connectivity from this ISP via dedicated 60G PtP connection: This would be the ideal solution but is roughly seven times more expensive.
+2) Starlink: I considered Starlink and I'm glad I didn't choose it, as it would be three times slower and three times more expensive than the solution we eventually chose.
+3) LTE: We opted for LTE as it was something we could try and either install permanently or return. It was quite risky as the cell coverage in our locality is very poor (measured from cellphone) and providers don't offer "wireless Internet service" in our area.
+
+### Obtaining a SIM card for the LTE antena
+
+A month ago, I was approached by an external call center representing T-Mobile. They offered me a decent price for an unlimited data SIM card. So when I decided to purchase it, I called T-Mobile and received another, this time two times more expensive, offer. The representative was quickly done with me, and as I already have a business account with T-Mobile with several high-tier services, I was quite disappointed.
+
+Luckily, I made a third attempt to get the SIM card and this time I got lucky. Instead of calling, I just visited the T-Mobile branch at Nový Smíchov shopping mall, where very pleasant Valerie took her time to learn my account and together we discussed different options. In the end, I received my SIM card with unlimited speed and unlimited data for a very decent price.
+
+We knew from GSMWeb.cz that there is a radio tower on Buchtův kopec - it's a big one, so it most probably has backup power and is connected by fiber. It is 5 kilometers away and we do have a line of sight from the rooftop to it. After a successful first attempt from the ground, the antenna was mounted on the rooftop. We get a solid ~350 Mbps down and ~50 Mbps up, the latency is worse at ~50 ms. The signal seems so far very solid; we measure RSSI at ~46 dBm and RSRP at ~75 dBm. Let's wait what rain, storms, and winter bring.
+
+## Network segmentation
+
+## Single main SSID
+
+## Firewall
