@@ -32,7 +32,7 @@ Previously, we were connected by 5GHz ac link from locally present big ISP, but 
 2) Starlink: I considered Starlink and I'm glad I didn't choose it, as it would be three times slower and three times more expensive than the solution we eventually chose.
 3) LTE: We opted for LTE as it was something we could try and either install permanently or return. It was quite risky as the cell coverage in our locality is very poor (measured from cellphone) and providers don't offer "wireless Internet service" in our area.
 
-### Obtaining a SIM card for the LTE antena
+### Obtaining a SIM card for the LTE antenna
 
 A month ago, I was approached by an external call center representing T-Mobile. They offered me a decent price for an unlimited data SIM card. So when I decided to purchase it, I called T-Mobile and received another, this time two times more expensive, offer. The representative was quickly done with me, and as I already have a business account with T-Mobile with several high-tier services, I was quite disappointed.
 
