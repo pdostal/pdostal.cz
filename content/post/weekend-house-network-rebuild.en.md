@@ -1,6 +1,6 @@
 ---
 title: Weekend house network rebuild
-date: 2024-06-13
+date: 2025-06-13
 tags:
   - network
 ---
@@ -25,12 +25,19 @@ In the small building, the cable runs comfortably around the walls to the Mikrot
 
 In the bigger building, the cable is attached to the beam and later fished through a conduit to a small in-wall utility box where the Mikrotik CRS112 and CSS610 are located.
 
+![Attic](/2506_optika_nova.jpeg)
+![Anchor](/2506_kotvicka.jpeg)
+![Rack on the small building](/2506_rack.jpeg)
+
 ## Internet connectivity
 Previously, we were connected by 5GHz ac link from locally present big ISP, but due to our remote location, the maximum speed they offer for end users is 30/3 Mbps. The whole village is connected by a 60G link, so we were hunting for other options, and so far there are three:
 
 1) Business connectivity from this ISP via dedicated 60G PtP connection: This would be the ideal solution but is roughly seven times more expensive.
 2) Starlink: I considered Starlink and I'm glad I didn't choose it, as it would be three times slower and three times more expensive than the solution we eventually chose.
 3) LTE: We opted for LTE as it was something we could try and either install permanently or return. It was quite risky as the cell coverage in our locality is very poor (measured from cellphone) and providers don't offer "wireless Internet service" in our area.
+
+![LHG LTE18 antena](/2506_lhg_lte18.jpeg)
+![LTE signal](/2506_lte_signal.jpeg)
 
 ### Obtaining a SIM card for the LTE antenna
 

@@ -1,6 +1,6 @@
 ---
 title: Renovace sítě na chalupě
-date: 2024-06-13
+date: 2025-06-13
 tags:
   - network
 ---
@@ -25,12 +25,19 @@ Na malé chalupě kabel pohodlně vede podél stěn do racku Mikrotik SR-10U, kd
 
 Na větší chalupě je kabel přichycen k trámu a později protažen chráničkou do vestavěné krabice, kde jsou umístěny Mikrotik CRS112 a CSS610.
 
+![Optika na větší chalupě](/2506_optika_nova.jpeg)
+![Kotvička na stěně](/2506_kotvicka.jpeg)
+![Rack na menší chalupě](/2506_rack.jpeg)
+
 ## Připojení k Internetu
 Dříve jsme byli připojeni 5GHz ac spojem od místního velkého ISP, ale kvůli odlehlé poloze je maximální rychlost, kterou pro koncové uživatele nabízí, 30/3 Mbps. Celá vesnice je připojena 60G spojem. Proto jsme hledali jiné možnosti a zatím jsou tři:
 
 1) Firemní připojení od tohoto ISP přes dedikovaný 60G PtP spoj: Ideální řešení, ale zhruba sedmkrát dražší.
 2) Starlink: Zvažoval jsem Starlink a jsem rád, že jsem ho nevybral, protože by byl třikrát pomalejší a třikrát dražší LTE.
 3) LTE: Rozhodli jsme se pro LTE, protože to bylo něco, co jsme mohli vyzkoušet a případně nainstalovat natrvalo nebo vrátit. Bylo to dost riskantní, protože pokrytí signálem je u nás velmi špatné (měřeno z mobilu) a poskytovatelé zde službu "bezdrátový internet domů" nenabízí.
+
+![LHG LTE18 anténa](/2506_lhg_lte18.jpeg)
+![LTE signál](/2506_lte_signal.jpeg)
 
 ### Získání SIM karty pro LTE anténu
 
