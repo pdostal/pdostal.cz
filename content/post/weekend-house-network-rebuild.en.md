@@ -12,9 +12,9 @@ The objectives were:
 2. Install an LTE dish to provide better Internet connectivity
 
 The further objectives are:
-4. Replace the old SSIDs with a single SSID to enable seamless roaming across the property
-5. Segment the network into multiple VLANs and reassign the existing networking and IoT devices
-6. Set up new firewall rules to secure the infrastructure and allow only the necessary traffic
+3. Replace the old SSIDs with a single SSID to enable seamless roaming across the property
+4. Segment the network into multiple VLANs and reassign the existing networking and IoT devices
+5. Set up new firewall rules to secure the infrastructure and allow only the necessary traffic
 
 <!--more-->
 

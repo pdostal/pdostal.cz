@@ -12,9 +12,9 @@ Cíle byly:
 2. Nainstalovat LTE anténu pro lepší připojení k internetu
 
 Další cíle jsou:
-4. Nahradit dvě stará SSID jedním, aby bylo možné plynulé přecházení po celém pozemku
-5. Rozsegmentovat síť do více VLAN a přeřadit stávajícím síťovým a IoT zařízením nové adresy
-6. Nastavit nová pravidla firewallu pro zabezpečení infrastruktury a povolit pouze nezbytný provoz
+3. Nahradit dvě stará SSID jedním, aby bylo možné plynulé přecházení po celém pozemku
+4. Rozsegmentovat síť do více VLAN a přeřadit stávajícím síťovým a IoT zařízením nové adresy
+5. Nastavit nová pravidla firewallu pro zabezpečení infrastruktury a povolit pouze nezbytný provoz
 
 <!--more-->
 
