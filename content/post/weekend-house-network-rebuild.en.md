@@ -26,7 +26,7 @@ In the small building, the cable runs comfortably around the walls to the Mikrot
 In the bigger building, the cable is attached to the beam and later fished through a conduit to a small in-wall utility box where the Mikrotik CRS112 and CSS610 are located.
 
 ## Internet connectivity
-Previously, we were connected by 5GHz ac link from locally present big ISP, but due to our remote location, the maximum speed they offer for end users is 30/3 Mbps. The whole village is conntected by 60G link So we were hunting for other options, and so far there are three:
+Previously, we were connected by 5GHz ac link from locally present big ISP, but due to our remote location, the maximum speed they offer for end users is 30/3 Mbps. The whole village is connected by a 60G link, so we were hunting for other options, and so far there are three:
 
 1) Business connectivity from this ISP via dedicated 60G PtP connection: This would be the ideal solution but is roughly seven times more expensive.
 2) Starlink: I considered Starlink and I'm glad I didn't choose it, as it would be three times slower and three times more expensive than the solution we eventually chose.
