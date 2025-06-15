@@ -8,10 +8,12 @@ tags:
 Pár týdnů zpět jsme s kamarádem Ondrou provedli zásadní obnovu sítě na naší chalupě.
 
 Cíle byly:
+
 1. Propojit dvě budovy optickým spojem
 2. Nainstalovat LTE anténu pro lepší připojení k internetu
 
 Další cíle jsou:
+
 3. Nahradit dvě stará SSID jedním, aby bylo možné plynulé přecházení po celém pozemku
 4. Rozsegmentovat síť do více VLAN a přeřadit stávajícím síťovým a IoT zařízením nové adresy
 5. Nastavit nová pravidla firewallu pro zabezpečení infrastruktury a povolit pouze nezbytný provoz

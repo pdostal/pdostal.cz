@@ -8,10 +8,12 @@ tags:
 A few weeks ago, my friend Ondra and I performed a significant refresh of our weekend house network.
 
 The objectives were:
+
 1. Connect two buildings with a fibre link
 2. Install an LTE dish to provide better Internet connectivity
 
 The further objectives are:
+
 3. Replace the old SSIDs with a single SSID to enable seamless roaming across the property
 4. Segment the network into multiple VLANs and reassign the existing networking and IoT devices
 5. Set up new firewall rules to secure the infrastructure and allow only the necessary traffic
