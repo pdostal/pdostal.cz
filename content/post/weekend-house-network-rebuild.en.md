@@ -56,8 +56,7 @@ We knew from [GSMWeb.cz](https://gsmweb.cz/) (a very cool user-contributed BTS m
 
 ## Single main SSID
 
-Before, when a client connected to one SSID and walked too far from the corresponding building, the connection dropped. As the buildings are close to each other and there is a lot of outdoor stuff to do, the wireless experience was not very reliable. After we merged the networks together, clients can seamlessly roam around the properties and enjoy a stable connection. The Mikrotik CapsMan supports roaming so there are no reconnects. The patios, gardens, as well as parking lots, are covered by already installed outdoor access points.  
-There is a total of eight 802.11ax WiFi access points covering the whole property and all of its grounds.
+Before, when a client connected to one SSID and walked too far from the corresponding building, the connection dropped. As the buildings are close to each other and there is a lot of outdoor stuff to do, the wireless experience was not very reliable. After we merged the networks together, clients can seamlessly roam around the properties and enjoy a stable connection. The Mikrotik CapsMan supports roaming so there are no reconnects. There is a total of eight 802.11ax WiFi access points covering the whole property and all of its grounds including patios, gardens, parking spots and more.
 
 ## Network segmentation
 
