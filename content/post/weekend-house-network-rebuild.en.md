@@ -60,7 +60,7 @@ Before, when a client connected to one SSID and walked too far from the correspo
 
 ## Network segmentation
 
-There used to be two separate networks with two separate routers. In those networks clients were mixed together with IoT devices and everyone had access everywhere. In order to increase the security, the one big layer 2 network was split by creating three three networks, two of them being inside of a VLAN:
+There used to be two separate networks with two separate routers. In those networks clients were mixed together with IoT devices and everyone had access everywhere. In order to increase the security, the one big layer 2 network was split by creating three networks, two of them being inside of a VLAN:
 
 1) Public network: This is the main, untagged, network where all the clients connect. The network is accessible via the main SSID mentioned above.
 2) IoT network: A new IoT network where all the sensors for monitoring electricity and air quality are. The network is also accessible via a separate SSID.
@@ -79,5 +79,5 @@ We think we did a lot of great physical as well as later configurational work. T
 There is still a lot of room for progress but changes are risky as the village is pretty remote.
 
 
-### note from Ondra
+**Note from Ondra**
 > I had a great time. I'm a big network enthusiast and enjoyed my work with Pavel very much and I am glad that I could help him. We already have ideas about what to do next time we are there, such as 5G uplink instead of LTE.
