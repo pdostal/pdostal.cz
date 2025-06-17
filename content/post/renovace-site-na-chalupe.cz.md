@@ -77,5 +77,5 @@ Přístup k internetu je povolen ze všech tří sítí, ale jak IoT, tak veřej
 
 Myslím že jsme udělali spoustu práce, jak fyzické tak později konfigurační. Bezdrátová síť je nyní stabilnější a bezpečnější a připojení k Internetu rychlejší. Stále je co vylepšovat ale větší změny jsou riskantní protože chalupy stojí na poměrně odlehlém místě.
 
-Poznámka od Ondry:  
-Byla to velká zábava. Mám vcelku velký zájem o cokoliv okolo počítačových sítí, ať vzduchem, po metalice nebo i opticky, tudíž bylo stavění sítí u Pavla na chalupách přijemně strávený čas. Už teď máme spoustu nápadů co a jak vylepšíme, až tam budem příště, třeba lepší 5G uplink, než stávající LTE.
+**Poznámka od Ondry**
+> Byla to velká zábava. Mám vcelku velký zájem o cokoliv okolo počítačových sítí, ať vzduchem, po metalice nebo i opticky, tudíž bylo stavění sítí u Pavla na chalupách přijemně strávený čas. Už teď máme spoustu nápadů co a jak vylepšíme, až tam budem příště, třeba lepší 5G uplink, než stávající LTE.
