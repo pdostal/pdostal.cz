@@ -27,13 +27,14 @@ Na malé chalupě kabel pohodlně vede podél stěn do racku Mikrotik SR-10U, kd
 
 Na větší chalupě je kabel přichycen k dřevěnému střešnímu trámu a o kousek dál protažen chráničkou do vestavěné krabice, kde jsou umístěny Mikrotik CRS112 a CSS610. Zde na střeše je zároveň záložní konektivita, 5 GHz ax wifi.
 
+![Optika na větší chalupě](/2506_optika_nova.jpeg)
+![Krabička, ve které jsou switche a HomeAssistant Green](/2506_krabicka.jpeg)
+![Kotvička na stěně](/2506_kotvicka.jpeg)
+![Rack na menší chalupě](/2506_rack.jpeg)
+
 ### Alternativy
 Než jsme se s jistotou rozhodnuli pro použití optiky, uvažovali jsme i o jiných možnostech jak chalupy propojit, jako třeba bezdrát. Takový přísup by byl jednodušší na přípravu i instalaci, a nevyžadoval by žádné vrtání do předních stěn domu a ani protahování třiceti metrů optiky těsnými místy a přes půdu plnou skelné izolace.  
 I přes všechny nevýhody jsme radši šli do věšení optiky. Důvody pro to jsou stabilita, rychlost (v našem případě začínáme _jen_ na 10Gbps) a možnost upgrade v budoucnu. Stačilo by jen vyměnit transceivery až se nám zachce.
-
-![Optika na větší chalupě](/2506_optika_nova.jpeg)
-![Kotvička na stěně](/2506_kotvicka.jpeg)
-![Rack na menší chalupě](/2506_rack.jpeg)
 
 ## Připojení k Internetu
 Dříve jsme byli připojeni 5GHz ac PtMP spojem od místního velkého ISP, kvůli odlehlé poloze je ale maximální rychlost, kterou pro koncové uživatele nabízí, jen 30/3 Mbps. Celá vesnice je připojena mikrovlnným spojem (Racom Ray3 domácí produkce 🇨🇿). Proto jsme hledali jiné možnosti.  

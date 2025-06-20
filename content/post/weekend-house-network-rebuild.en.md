@@ -27,13 +27,14 @@ In the small building, the cable runs comfortably around the walls to the `Mikro
 
 In the bigger building, the cable is attached to a wooden roof beam and later fished through a conduit to a small in-wall utility box where the Mikrotik CRS112 and CSS610 are located and blinking happily.
 
+![Attic](/2506_optika_nova.jpeg)
+![Box with switches and HomeAssistant Green](/2506_krabicka.jpeg)
+![Anchor](/2506_kotvicka.jpeg)
+![Rack on the small building](/2506_rack.jpeg)
+
 ### Alternatives
 Before deciding on a fiber link between the buildings, we have also considered using a wireless alternative. It would be easier to install, setup and wouldn't require drilling into the houses's front walls and pulling 30 meters of fiber through tight spaces and lofts.  
 Even with all the work required to link the buildings with fiber, we decided to go for it. We want the stability, speed (10 Gbps in our case) and especially future upgradability. We could just swap out the optic transceivers when we want to.
-
-![Attic](/2506_optika_nova.jpeg)
-![Anchor](/2506_kotvicka.jpeg)
-![Rack on the small building](/2506_rack.jpeg)
 
 ## Internet connectivity
 Previously, we were connected by 5GHz ac link from a locally present big ISP, but due to our remote location, the maximum speed they offer for end users is 30/3 Mbps. The whole village is connected by a microwave link (Racom Ray3 radio made in 🇨🇿), so we were hunting for other options.  
