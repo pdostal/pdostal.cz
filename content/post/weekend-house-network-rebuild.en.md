@@ -3,6 +3,9 @@ title: Weekend house network rebuild
 date: 2025-06-13
 tags:
   - network
+authors:
+  - Pavel Dostal
+  - Ondrej Pithart
 ---
 
 A few weeks ago, my friend Ondra and I performed a significant refresh of our weekend house network.
@@ -21,16 +24,17 @@ The further objectives are:
 <!--more-->
 
 ## The fiber link
-The two buildings that we want to connect are only 5 meters apart, so we used a ready-made single-mode two-core outdoor-rated armored fiber patch. We have installed an anchor on each end of the fiber span to hold it in place and gave it some tolerance to allow the cable to move. We installed it as high as possible, making it nearly invisible and safe from tall vehicles. We have achieved a very low loss of just around 1 dBm on the whole fiber run, which means that we did not damage the fiber cores nor make the connectors dirty.
+The two buildings that we want to connect are only 5 meters apart, so we used a ready-made single-mode two-core outdoor-rated armored fiber patch from [Fiber Arsenal]. We have installed an anchor on each end of the fiber span to hold it in place and gave it some tolerance to allow the cable to move. We installed it as high as possible, making it nearly invisible and safe from tall vehicles. We have achieved a very low loss of just around 1 dBm on the whole fiber run, which means that we did not damage the fiber cores nor make the connectors dirty.
+
+![Anchor](/2506_kotvicka.jpeg)
+![Rack on the small building](/2506_rack.jpeg)
 
 In the small building, the cable runs comfortably around the walls to the [Mikrotik SR-10U] rack, where it's connected to the [Mikrotik RB5009] main router called "Kadovánek" after the tasty local herb liqueur. There is enough space to comfortably service the equipment, plus the main LTE uplink ([Mikrotik LHG LTE18]) is also located here.
 
-In the bigger building, the cable is attached to a wooden roof beam and later fished through a conduit to a small in-wall utility box where the [Mikrotik CSS610] and [Mikrotik CRS112] are located and blinking happily.
+In the bigger building, the cable is attached to a wooden roof beam and later fished through a conduit to a small in-wall utility box where the Mikrotik switches [CSS610] and [CRS112] are located and blinking happily.
 
 ![Attic](/2506_optika_nova.jpeg)
 ![Box with switches and HomeAssistant Green](/2506_krabicka.jpeg)
-![Anchor](/2506_kotvicka.jpeg)
-![Rack on the small building](/2506_rack.jpeg)
 
 ### Alternatives
 Before deciding on a fiber link between the buildings, we have also considered using a wireless alternative. It would be easier to install, setup and wouldn't require drilling into the houses's front walls and pulling 30 meters of fiber through tight spaces and lofts.  
@@ -57,7 +61,7 @@ We knew from [GSMWeb.cz](https://gsmweb.cz/) (a very cool user-contributed BTS m
 
 ## Single main SSID
 
-Before, when a client connected to one SSID and walked too far from the corresponding building, the connection dropped. As the buildings are close to each other and there is a lot of outdoor stuff to do, the wireless experience was not very reliable. After we merged the networks together, clients can seamlessly roam around the properties and enjoy a stable connection. The Mikrotik CapsMan supports roaming so there are no reconnects. There is a total of nine 802.11ax WiFi access points covering the whole property and all of its grounds including patios, gardens, parking spots and more.
+Before, when a client connected to one SSID and walked too far from the corresponding building, the connection dropped. As the buildings are close to each other and there is a lot of outdoor stuff to do, the wireless experience was not very reliable. After we merged the networks together, clients can seamlessly roam around the properties and enjoy a stable connection. The Mikrotik CapsMan supports roaming so there are no reconnects. There is a total of nine Mikrotik [wAP ax] and [cAP ax] WiFi access points covering the whole property and all of its grounds including patios, gardens, parking spots and more.
 
 ## Network segmentation
 
@@ -76,15 +80,19 @@ Access to the Internet is allowed from all three networks but both IoT as well a
 
 ## Conclusion
 
-We think we did a lot of great physical as well as later configurational work. The network is now more reliable, and more secure and the Internet connectivity is much faster than before.  
+**From Pavel**
+> We think we did a lot of great physical as well as later configurational work. The network is now more reliable, and more secure and the Internet connectivity is much faster than before.  
 There is still a lot of room for progress but bigger remote changes are risky as the village is pretty remote.
 
 
-**Note from Ondra**
+**From Ondra**
 > I had a great time. I'm a big network enthusiast and enjoyed my work with Pavel very much and I am glad that I could help him. We already have ideas about what to do next time we are there, such as 5G uplink instead of LTE.
 
+[Fiber Arsenal]: https://www.wifishop.cz/opticky-kabel-fiber-arsenal-2vl-2x-lc-sm-outdoor_d49256.html
 [Mikrotik SR-10U]: https://mikrotik.com/product/rack_holder_sr_10u
 [Mikrotik RB5009]: https://mikrotik.com/product/rb5009upr_s_in
 [Mikrotik LHG LTE18]: https://mikrotik.com/product/lhg_lte18
-[Mikrotik CRS112]: https://mikrotik.com/product/CRS112-8G-4S-IN
-[Mikrotik CSS610]: https://mikrotik.com/product/css610_8p_2s_in
+[CRS112]: https://mikrotik.com/product/CRS112-8G-4S-IN
+[CSS610]: https://mikrotik.com/product/css610_8p_2s_in
+[wAP ax]: https://mikrotik.com/product/wap_ax
+[cAP ax]: https://mikrotik.com/product/cap_ax

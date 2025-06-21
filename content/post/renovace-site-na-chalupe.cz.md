@@ -3,6 +3,9 @@ title: Renovace sítě na chalupě
 date: 2025-06-13
 tags:
   - network
+authors:
+  - Pavel Dostal
+  - Ondrej Pithart
 ---
 
 Pár týdnů zpět jsme s kamarádem Ondrou provedli zásadní obnovu sítě na naší chalupě.
@@ -21,16 +24,17 @@ Další cíle jsou:
 <!--more-->
 
 ## Optický převěs
-Budovy jsou od sebe jen 5 metrů daleko, takže jsme použili hotový single-mode dvouvláknový venkovní armovaný kabel. Na každé straně převěsu jsou plastové kotvy na optické převěsy, kabel jsme nenapínali jak strunu, ale nechali trochu prověšený ať má místo na pohyb ve větru. Instalovali jsme ho co nejvýše, takže je téměř neviditelný a v bezpečí před vysokými auty. Celková optická trasa má ztrátu okolo 1 dBm, to znamená že optické vlákna jsme při manipulaci nezlomili a ani jsme nezašpinili konektory.
+Budovy jsou od sebe jen 5 metrů daleko, takže jsme použili hotový single-mode dvouvláknový venkovní armovaný kabel [Fiber Arsenal]. Na každé straně převěsu jsou plastové kotvy na optické převěsy, kabel jsme nenapínali jak strunu, ale nechali trochu prověšený ať má místo na pohyb ve větru. Instalovali jsme ho co nejvýše, takže je téměř neviditelný a v bezpečí před vysokými auty. Celková optická trasa má ztrátu okolo 1 dBm, to znamená že optické vlákna jsme při manipulaci nezlomili a ani jsme nezašpinili konektory.
+
+![Kotvička na stěně](/2506_kotvicka.jpeg)
+![Rack na menší chalupě](/2506_rack.jpeg)
 
 Na malé chalupě kabel pohodlně vede podél stěn do racku [Mikrotik SR-10U], kde je připojen k hlavnímu routeru [Mikrotik RB5009], který nese jméno "Kadovánek" podle místního bylinkového likéru. Je zde dostatek místa pro servis zařízení a zároveň je zde i hlavní LTE uplink [Mikrotik LHG LTE18].
 
-Na větší chalupě je kabel přichycen k dřevěnému střešnímu trámu a o kousek dál protažen chráničkou do vestavěné krabice, kde jsou umístěny [Mikrotik CSS610] a [Mikrotik CRS112]. Zde na střeše je zároveň záložní konektivita, 5 GHz ax wifi.
+Na větší chalupě je kabel přichycen k dřevěnému střešnímu trámu a o kousek dál protažen chráničkou do vestavěné krabice, kde jsou umístěny switche Mikrotik [CSS610] a [CRS112]. Zde na střeše je zároveň záložní konektivita, 5 GHz ax wifi.
 
 ![Optika na větší chalupě](/2506_optika_nova.jpeg)
 ![Krabička, ve které jsou switche a HomeAssistant Green](/2506_krabicka.jpeg)
-![Kotvička na stěně](/2506_kotvicka.jpeg)
-![Rack na menší chalupě](/2506_rack.jpeg)
 
 ### Alternativy
 Než jsme se s jistotou rozhodnuli pro použití optiky, uvažovali jsme i o jiných možnostech jak chalupy propojit, jako třeba bezdrát. Takový přísup by byl jednodušší na přípravu i instalaci, a nevyžadoval by žádné vrtání do předních stěn domu a ani protahování třiceti metrů optiky těsnými místy a přes půdu plnou skelné izolace.  
@@ -57,7 +61,7 @@ Z [GSMWeb.cz](https://gmsweb.cz) jsme věděli, že na Buchtově kopci je velký
 
 ## Jedno hlavní SSID
 
-Dříve, když se klient připojil k jednomu SSID a odešel příliš daleko od příslušné budovy, spojení se přerušilo. Protože jsou chalupy blízko sebe a hlavně v létě lidé většinu času tráví venku, nebylo bezdrátové připojení příliš spolehlivé. Po sloučení sítí mohou klienti plynule přecházet po celém pozemku a užívat si stabilní WIFI. Mikrotik CapsMan podporuje roaming, takže nedochází k odpojování. Nyní celý areál včetně teras, zahrad i parkovišť pokrývá devět 802.11 ax Mikrotik access pointů.
+Dříve, když se klient připojil k jednomu SSID a odešel příliš daleko od příslušné budovy, spojení se přerušilo. Protože jsou chalupy blízko sebe a hlavně v létě lidé většinu času tráví venku, nebylo bezdrátové připojení příliš spolehlivé. Po sloučení sítí mohou klienti plynule přecházet po celém pozemku a užívat si stabilní WIFI. Mikrotik CapsMan podporuje roaming, takže nedochází k odpojování. Nyní celý areál včetně teras, zahrad i parkovišť pokrývá devět Mikrotik [wAP ax] a [cAP ax] access pointů.
 
 ## Segmentace sítě
 
@@ -76,13 +80,17 @@ Přístup k internetu je povolen ze všech tří sítí, ale jak IoT, tak veřej
 
 ## Shrnutí
 
-Myslím že jsme udělali spoustu práce, jak fyzické tak později konfigurační. Bezdrátová síť je nyní stabilnější a bezpečnější a připojení k Internetu rychlejší. Stále je co vylepšovat ale větší vzdálené změny jsou riskantní protože chalupy stojí na poměrně odlehlém místě.
+**Od Pavla**
+> Myslím že jsme udělali spoustu práce, jak fyzické tak později konfigurační. Bezdrátová síť je nyní stabilnější a bezpečnější a připojení k Internetu rychlejší. Stále je co vylepšovat ale větší vzdálené změny jsou riskantní protože chalupy stojí na poměrně odlehlém místě.
 
-**Poznámka od Ondry**
+**Od Ondry**
 > Byla to velká zábava. Mám vcelku velký zájem o cokoliv okolo počítačových sítí, ať vzduchem, po metalice nebo i opticky, tudíž bylo stavění sítí u Pavla na chalupách přijemně strávený čas. Už teď máme spoustu nápadů co a jak vylepšíme, až tam budem příště, třeba lepší 5G uplink, než stávající LTE.
 
+[Fiber Arsenal]: https://www.wifishop.cz/opticky-kabel-fiber-arsenal-2vl-2x-lc-sm-outdoor_d49256.html
 [Mikrotik SR-10U]: https://mikrotik.com/product/rack_holder_sr_10u
 [Mikrotik RB5009]: https://mikrotik.com/product/rb5009upr_s_in
 [Mikrotik LHG LTE18]: https://mikrotik.com/product/lhg_lte18
-[Mikrotik CRS112]: https://mikrotik.com/product/CRS112-8G-4S-IN
-[Mikrotik CSS610]: https://mikrotik.com/product/css610_8p_2s_in
+[CRS112]: https://mikrotik.com/product/CRS112-8G-4S-IN
+[CSS610]: https://mikrotik.com/product/css610_8p_2s_in
+[wAP ax]: https://mikrotik.com/product/wap_ax
+[cAP ax]: https://mikrotik.com/product/cap_ax
