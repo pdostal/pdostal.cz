@@ -1,5 +1,4 @@
 ---
 title: "Hledat"
+layout: "search"
 ---
-
-{{<search>}}
