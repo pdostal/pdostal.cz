@@ -24,7 +24,7 @@ Další cíle jsou:
 <!--more-->
 
 ## Optický převěs
-Budovy jsou od sebe jen 5 metrů daleko, takže jsme použili hotový single-mode dvouvláknový venkovní armovaný kabel [Fiber Arsenal]. Na každé straně převěsu jsou plastové kotvy na optické převěsy, kabel jsme nenapínali jak strunu, ale nechali trochu prověšený ať má místo na pohyb ve větru. Instalovali jsme ho co nejvýše, takže je téměř neviditelný a v bezpečí před vysokými auty. Celková optická trasa má ztrátu okolo 1 dBm, to znamená že optické vlákna jsme při manipulaci nezlomili a ani jsme nezašpinili konektory.
+Budovy jsou od sebe jen 5 metrů daleko, takže jsme použili hotový single-mode dvouvláknový venkovní armovaný kabel [Fiber Arsenal]. Na každé straně převěsu jsou plastové kotvy na optické převěsy, kabel jsme nenapínali jak strunu, ale nechali trochu prověšený ať má místo na pohyb ve větru. Instalovali jsme ho co nejvýše, takže je téměř neviditelný a v bezpečí před vysokými auty. Celková optická trasa má ztrátu okolo 1 dBm, to znamená že optická vlákna jsme při manipulaci nezlomili a ani jsme nezašpinili konektory.
 
 ![Kotvička na stěně](/2506_kotvicka.jpeg)
 ![Rack na menší chalupě](/2506_rack.jpeg)
