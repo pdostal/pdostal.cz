@@ -1,6 +1,5 @@
 theme = "harbor"
 baseURL = "https://pdostal.cz/"
-paginate = 6
 title = "Pavel's blog"
 lastChange = "2021"
 
@@ -25,7 +24,7 @@ Name = "Pavel Dostál"
   "about" = "/bio"
 
 [outputs]
-    section = ["JSON", "HTML"]
+    section = ["HTML"]
 
 [params]
   customCSS = ["/css/custom.css"]
