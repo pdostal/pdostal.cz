@@ -5,7 +5,7 @@ tags:
   - linux
 ---
 
-As I still didn't deploy Kubernetes on my personal server, I introduce you my Docker(-Compose) setup:
+As I still haven't deployed Kubernetes on my personal server, I'll introduce you to my Docker(-Compose) setup:
 
 <!--more-->
 
@@ -38,12 +38,12 @@ When all containers are running we can connect to our machine on port 8080 and s
 
 ## Proxy
 It is recommended to put the instance behind a proxy server such as HAProxy or NGINX.
-I wrote [blog post]({{< ref "nginx-certbot" >}}) exmplaing how to setup NGINX for this.
+I wrote [blog post]({{< ref "nginx-certbot" >}}) explaining how to setup NGINX for this.
 
 ## Hugo integration - Harbor theme
 
-With working Matomo instance, I just had to [Add Matomo support](https://github.com/matsuyoshi30/harbor/pull/102)
-for Harbor theme and add Motomo domain name and site ID to my `config.toml`:
+With a working Matomo instance, I just had to [Add Matomo support](https://github.com/matsuyoshi30/harbor/pull/102)
+for Harbor theme and add Matomo domain name and site ID to my `config.toml`:
 
 ```
 [params.matomo]

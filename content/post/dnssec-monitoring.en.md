@@ -12,16 +12,16 @@ If you answered yes to all of those questions, then you probably want to monitor
 
 Everyone who has experience with DNSSEC deployment probably knows [DNSViz](https://dnsviz.net) and [DNSSEC-Debugger](https://dnssec-debugger.verisignlabs.com)
 but I wanted to have a more automated solution that I can run on my own server and after thinking about it for a while I realized that it's just another YAML
-snippet to my belowed [URLWatch](https://urlwatch.readthedocs.io/).
+snippet to my beloved [URLWatch](https://urlwatch.readthedocs.io/).
 
 ## URLWatch
 
-URLWatch is a tool originally for monitoring web pages for changes, but as it grew it become way more flexible. It can handle CSS, Json and even JavaScript if you attach a browser to it.
+URLWatch is a tool originally for monitoring web pages for changes, but as it grew it became way more flexible. It can handle CSS, Json and even JavaScript if you attach a browser to it.
 But it can also monitor the output of shell commands and with it's built-in Filters and Reporters it can be highly customized and it's output can be sent pretty much anywhere (e-mail, Slack, Matrix, etc.).
 
 ## Installing URLWatch
 
-As it's Python open source tool, it can be installed via pretty much every package manager, f.e. `sudo zypper in urlwatch` will do the job on openSUSE.
+As it's a Python open source tool, it can be installed via pretty much every package manager, f.e. `sudo zypper in urlwatch` will do the job on openSUSE.
 
 After installing the package you need to create `~/.config/urlwatch/urlwatch.yaml` configuration file. Here is a simple example:
 
@@ -63,7 +63,7 @@ chalupakadov.cz.        81278   IN      RRSIG   A 13 2 86400 20250608144012 2025
 
 **Warning:** Do not use `delv` against your own DNS server as it may give you false positive results, always use public DNS server for validation.
 
-## Letting URLWatch to do the job for us
+## Letting URLWatch do the job for us
 
 All the jobs URLWatch runs are defined in `~/.config/urlwatch/urls.yaml` file, so let's create a job for our DNSSEC validation:
 

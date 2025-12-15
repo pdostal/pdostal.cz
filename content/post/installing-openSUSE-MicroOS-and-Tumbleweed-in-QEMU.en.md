@@ -60,7 +60,7 @@ This can be easy to customize or automate. It may help you on other platforms to
 ```
 The above example installs MicroOS but when switching or skipping the autoyast profile we can install Tumbleweed as well.
 
-If you wanna boot from PXE then the `kernel` and `initrd` files are in the same location under `boot/x86_64/loader/` path.
+If you want to boot from PXE then the `kernel` and `initrd` files are in the same location under `boot/x86_64/loader/` path.
 
 ## Serial console installation with UEFI and secure boot enabled
 ```
