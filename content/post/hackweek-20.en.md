@@ -6,12 +6,12 @@ tags:
   - hackweek
 ---
 
-Rancher maintains 2 Kubernetes distribution, both production grade:
+Rancher maintains 2 Kubernetes distributions, both production grade:
 
  * k3s: Single binary containing containerd backend. Can be run as
    server or agent on each node of cluster. SQLite is used by default
    instead of ETCD. MySQL and Postgres also supported.
-   No prerequisity. Intended for edge computing.
+   No prerequisites. Intended for edge computing.
  * RKE: Deployed remotely over SSH on top of Docker which is the only
    required component of the underlying OS. Standard ETCD database
    in container. Each node and its roles are defined in YAML.
@@ -21,8 +21,8 @@ Rancher maintains 2 Kubernetes distribution, both production grade:
 
 ## Each scenario needs:
  1) Support Server: As Internet gateway, DHCP and DNS server.
- 2) Master node for the control node and it's database
- 3) ‎4. Worker nodes joining the cluster.
+ 2) Master node for the control node and its database
+ 3) 4. Worker nodes joining the cluster.
 
 ## TO-DO:
  * Run more tests on top of the Kubernetes cluster.

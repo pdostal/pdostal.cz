@@ -13,7 +13,7 @@ TL;DR: This article is so far about how to disable iptables integration and choo
 
 There are two defaults I don't like:
 1) Default network has `172.17.0.0/16` address space
-2) Docker is altering the iptables configuration automagically
+2) Docker is altering the iptables configuration automatically
 
 The solution is custom `/etc/docker/daemon.json` file:
 ```json

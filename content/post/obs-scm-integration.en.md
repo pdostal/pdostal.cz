@@ -1,5 +1,5 @@
 ---
-title: The OBSs & SCM integration
+title: The OBS & SCM integration
 date: 2023-01-30
 tags:
   - linux
@@ -12,8 +12,8 @@ This post will be about continuous integration between [Open Build Service] and 
 
 ## Tokens and webhooks
 
-1) Create personal access token in GitHub with scope "repo".
-     In large repositories that should be done in some service account.
+1) Create a personal access token in GitHub with the "repo" scope.
+     In large repositories, that should be done in a service account.
 
 2) Create token in OBS with the following parameters:
      * Type: Workflow
@@ -53,7 +53,7 @@ master:
 
 ## The OBS _service file
 
-The correspondig `_service`:
+The corresponding `_service`:
 
 ```xml
 <services>
@@ -70,19 +70,19 @@ The correspondig `_service`:
 ```
 
 The `obs_scm` service fetches the `master` from git. The package version is determined
-using the `versionformat` parameter and then set to the spec file using the `ser_version`.
+using the `versionformat` parameter and then set to the spec file using the `set_version`.
 
 
-## Debuging:
+## Debugging:
 
 ### Github
 
-In the Webhooks section of project settings, open the OBS webhook and then select the "Recent deliveries" tabs.
-Here you see the recent triggers and their request & response bodies.
+In the Webhooks section of project settings, open the OBS webhook and then select the "Recent deliveries" tab.
+Here you can see the recent triggers and their request & response bodies.
 
 ### OBS
 
-You can see the recent events as well as it's Artifacts in "My profile" -> Tokens -> Token ID ->  Workflow Runs.
+You can see the recent events as well as their Artifacts in "My profile" -> Tokens -> Token ID ->  Workflow Runs.
 
 ## Sources:
  * [Open Build Service Blog - Continuous Integration with OBS and GitHub/GitLab](https://openbuildservice.org/2021/05/31/scm-integration/)

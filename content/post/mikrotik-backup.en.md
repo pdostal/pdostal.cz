@@ -6,15 +6,15 @@ tags:
   - network
 ---
 
-I will show you how to daily backup your Mikrotik configuration. This uses `ssh`, `bash`, and `systemd-timer`.
+I will show you how to create a daily backup of your Mikrotik configuration. This uses `ssh`, `bash`, and `systemd-timer`.
 The aim for this mini project is to be *as simple as possible* but it supports *multiple target devices*!
 
 <!--more-->
 
 ## First of all, create the backup script (`~/bin/mikrotik-backup.sh`):
 
-This script backs your Mikrotik up and then remove the backups older than 90 days.
-You need to suply the device hostname and the directory where the backups will be saved.
+This script backs your Mikrotik up and then removes backups older than 90 days.
+You need to supply the device hostname and the directory where the backups will be saved.
 
 ```bash
 #!/usr/bin/env bash
@@ -25,7 +25,7 @@ find $2/ -name *.txt -type f -mtime +90 -exec rm '{}' \;
 
 ## Then create your systemd oneshot service (`~/.config/systemd/user/mikrotik-backup@.service`):
 
-This unit counts with `~/mikrotik_backup/` destination directory.
+This unit works with the `~/mikrotik_backup/` destination directory.
 
 ```
 [Unit]
@@ -59,7 +59,7 @@ WantedBy=timers.target
 
 ## SSH
 
-This script needs to be able to `ssh` to the Mikrotik automagically, e.g. try `ssh gw.local /system/routerboard/print` and it should not require any other input.
+This script needs to be able to `ssh` to the Mikrotik automatically, e.g. try `ssh gw.local /system/routerboard/print` and it should not require any other input.
 
 If your username differs from the Mikrotik's username, just create `~/.ssh/config` file with:
 

@@ -9,8 +9,8 @@ TL;DR: We should write proper commit messages - not only GitHub pull request des
 
 <!--more-->
 
-Every pull request on GitHub should have some introduction - this is called body.
-Then we have some commits and those commits have their introduction - that is called comment.
+Every pull request on GitHub should have some introduction - this is called the body.
+Then we have some commits and those commits have their introduction - that is called a message.
 
 Then after your pull request gets merged it is not trivial to find it.
 But the commits are more visible and easily accessible from web and terminal.
@@ -41,7 +41,7 @@ $ gh pr view --json body | jq -r '.body'
 # Change body of current pull request
 $ gh pr edit
 
-# Change body of current pull request non-interactivelly
+# Change body of current pull request non-interactively
 $ gh pr edit -b 'sadfasdf\nsfsfd'
 ```
 

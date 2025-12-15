@@ -5,7 +5,7 @@ tags:
   - linux
 ---
 
-After trying to to deploy to GitLab Pages and GitHub Pages I decided to deploy
+After trying to deploy to GitLab Pages and GitHub Pages I decided to deploy
 to my own server as neither of those providers fit my needs, because:
 
  * Neither of those providers support IPv6.
@@ -69,7 +69,7 @@ where I have my Hugo source code and it does those steps:
 
 Of course we need to also prepare the server, I created separate user
 with `scponly` shell and no password but **keep in mind that this user
-will be reachable using RSA key storred in GitHub Secrets** so it's up
+will be reachable using RSA key stored in GitHub Secrets** so it's up
 to you whether you trust GitHub Secrets. Here is my setup:
 
 ```
