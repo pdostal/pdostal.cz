@@ -11,7 +11,7 @@ TL;DR: This article describes how to configure custom static networking with Pod
 
 ## Preparation phase
 
-First of all, let's set proper subnet and disablet Podman - NFTables interaction:
+First of all, let's set a proper subnet and disable Podman - NFTables interaction:
 
 ```bash
 # cat /etc/containers/containers.conf
@@ -24,11 +24,11 @@ default_subnet = "100.64.0.0/24"
 }
 ```
 
-The `100.64.0.0/10` prefix is designed for CGNAT and won't colide with other private networks. See [rfc6598].
+The `100.64.0.0/10` prefix is designed for CGNAT and won't collide with other private networks. See [rfc6598].
 
 ## Deployment
 
-Let's deploy each service (NextCloud, Immich, Gitea, ...) to separate isolated pod and therefore let's provide separate isolated network for each pod.
+Let's deploy each service (NextCloud, Immich, Gitea, ...) to a separate isolated pod and therefore let's provide a separate isolated network for each pod.
 
 ```bash
 # cat /etc/containers/system/example.network
@@ -39,12 +39,12 @@ Description=Example Network
 Subnet=100.64.1.0/24
 Gateway=100.64.1.1
 IPAMDriver=host-local
-Label=app=Example
+Label=app=example
 InterfaceName=podman-example
 NetworkName=example
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
 
 # cat /etc/containers/system/example.pod
 [Unit]
@@ -59,7 +59,7 @@ Label=app=example
 [Install]
 WantedBy=multi-user.target
 
-# /etc/containers/system/example-app.container
+# cat /etc/containers/system/example-app.container
 [Unit]
 Description=Example App Container
 
@@ -75,13 +75,13 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 
-# /etc/containers/system/example-db.container
+# cat /etc/containers/system/example-db.container
 [Unit]
 Description=Example DB Container
 
 [Container]
 ContainerName=example-db
-Image=registry.opensuse.org/opensuse/nginx:latest
+Image=registry.opensuse.org/opensuse/postgres:latest
 Pod=example.pod
 Label=app=example
 
@@ -98,7 +98,7 @@ Our Example application is reachable via `100.64.1.2` address.
 
 There are of course two important steps missing:
 
-1) Firewall of your choise
+1) Firewall of your choice
 2) HTTP(S) Proxy of your choice
 
 [rfc6598]: https://datatracker.ietf.org/doc/html/rfc6598
