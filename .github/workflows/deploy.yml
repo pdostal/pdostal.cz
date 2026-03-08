@@ -1,11 +1,15 @@
 name: Deploy
+
 on:
   push:
     branches:
       - master
+
 jobs:
-  deploy:
+  release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Git checkout
         uses: actions/checkout@v4
@@ -21,12 +25,33 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          source: "public/"
-          target: "/var/www/pdostal.cz/"
+      - name: Create tarball
+        run: tar -czf site.tar.gz public/
+
+      - name: Generate release metadata
+        id: meta
+        run: |
+          echo "tag=build-$(date -u +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+          echo "title=$(date -u +'%-d. %-m. %Y %H:%M:%S')" >> $GITHUB_OUTPUT
+
+          if git cat-file -e "${{ github.event.before }}" 2>/dev/null; then
+            RANGE="${{ github.event.before }}..${{ github.sha }}"
+          else
+            RANGE="${{ github.sha }}"
+          fi
+
+          NOTES=$(git log "$RANGE" --pretty=format:"- \`%h\` %s (%an)")
+
+          {
+            echo "notes<<EOF"
+            echo "$NOTES"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
+
+      - name: Publish release
+        run: |
+          gh release create "${{ steps.meta.outputs.tag }}" site.tar.gz \
+            --title "${{ steps.meta.outputs.title }}" \
+            --notes "${{ steps.meta.outputs.notes }}"
+        env:
+          GH_TOKEN: ${{ github.token }}
