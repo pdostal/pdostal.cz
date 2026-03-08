@@ -1,6 +1,6 @@
 ---
 title: IPv6 on Linux servers
-date: 2023-03-08
+date: 2026-03-08
 tags:
   - linux
   - network
