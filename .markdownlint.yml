@@ -1,0 +1,21 @@
+---
+# markdownlint configuration
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+default: true
+
+# Allow duplicate headings (common in Hugo blog posts)
+MD024: false
+
+# Disable line length limit (blog posts have long lines)
+MD013: false
+
+# Allow inline HTML (Hugo shortcodes and custom HTML are used)
+MD033: false
+
+# Allow bare URLs (used in references and links)
+MD034: false
+
+# First line in file should be a top-level heading
+# Disabled because Hugo front matter is the first content
+MD041: false

@@ -1,0 +1,8 @@
+# shellcheck configuration
+# https://www.shellcheck.net/wiki/Directive
+
+# Use bash as the default shell dialect
+shell=bash
+
+# Disable warnings for following sourced files (SC1091)
+disable=SC1091
