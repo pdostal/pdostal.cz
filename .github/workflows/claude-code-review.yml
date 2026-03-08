@@ -29,10 +29,38 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
+      - name: Check if Claude is author or co-author
+        id: check-claude
+        run: |
+          CLAUDE_INVOLVED=false
+
+          # Check if PR author login contains 'claude'
+          PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+          if echo "$PR_AUTHOR" | grep -qi "claude"; then
+            CLAUDE_INVOLVED=true
+            echo "Claude detected as PR author: $PR_AUTHOR"
+          fi
+
+          # Check if head branch starts with 'claude/'
+          HEAD_BRANCH="${{ github.event.pull_request.head.ref }}"
+          if echo "$HEAD_BRANCH" | grep -q "^claude/"; then
+            CLAUDE_INVOLVED=true
+            echo "Claude detected via branch name: $HEAD_BRANCH"
+          fi
+
+          # Check commits for Claude co-authorship
+          if git log origin/${{ github.event.pull_request.base.ref }}..${{ github.event.pull_request.head.sha }} --format="%B" 2>/dev/null | grep -qi "co-authored-by:.*claude"; then
+            CLAUDE_INVOLVED=true
+            echo "Claude detected as commit co-author"
+          fi
+
+          echo "claude-involved=$CLAUDE_INVOLVED" >> $GITHUB_OUTPUT
+          echo "Final result - Claude involved: $CLAUDE_INVOLVED"
 
       - name: Run Claude Code Review
         id: claude-review
+        if: steps.check-claude.outputs.claude-involved != 'true'
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
