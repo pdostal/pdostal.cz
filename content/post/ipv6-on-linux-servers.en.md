@@ -33,7 +33,7 @@ IDX LINK    TYPE     OPERATIONAL SETUP
 
 2) The configuration part:
 
-```
+```ini
 # /etc/systemd/network/20-ens18.network
 [Match]
 Name=ens18
