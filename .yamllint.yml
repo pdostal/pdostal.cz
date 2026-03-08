@@ -1,0 +1,16 @@
+---
+# yamllint configuration
+# https://yamllint.readthedocs.io/en/stable/configuration.html
+
+extends: default
+
+rules:
+  # Allow longer lines (GitHub Actions workflows can have long lines)
+  line-length:
+    max: 120
+    level: warning
+
+  # Allow both true/false and yes/no boolean values
+  truthy:
+    allowed-values: ['true', 'false', 'yes', 'no', 'on', 'off']
+    check-keys: false
