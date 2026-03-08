@@ -1,0 +1,54 @@
+---
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v46
+        with:
+          files_yaml: |
+            markdown:
+              - '**/*.md'
+            yaml:
+              - '**/*.yml'
+              - '**/*.yaml'
+            json:
+              - '**/*.json'
+            bash:
+              - '**/*.sh'
+
+      - name: Lint Markdown
+        if: steps.changed-files.outputs.markdown_any_changed == 'true'
+        run: |
+          npm install -g markdownlint-cli
+          markdownlint ${{ steps.changed-files.outputs.markdown_all_changed_files }}
+
+      - name: Lint YAML
+        if: steps.changed-files.outputs.yaml_any_changed == 'true'
+        run: |
+          pip install yamllint
+          yamllint ${{ steps.changed-files.outputs.yaml_all_changed_files }}
+
+      - name: Lint JSON
+        if: steps.changed-files.outputs.json_any_changed == 'true'
+        run: |
+          for f in ${{ steps.changed-files.outputs.json_all_changed_files }}; do
+            python3 -m json.tool "$f" > /dev/null && echo "OK: $f" || echo "FAIL: $f"
+          done
+
+      - name: Lint Bash
+        if: steps.changed-files.outputs.bash_any_changed == 'true'
+        run: shellcheck ${{ steps.changed-files.outputs.bash_all_changed_files }}
+
