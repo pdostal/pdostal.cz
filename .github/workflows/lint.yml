@@ -21,7 +21,7 @@ jobs:
       bash_all_changed_files: ${{ steps.changed-files.outputs.bash_all_changed_files }}
     steps:
       - name: Git checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -46,7 +46,7 @@ jobs:
     if: needs.changed-files.outputs.markdown_any_changed == 'true'
     steps:
       - name: Git checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Lint Markdown
         run: |
@@ -59,7 +59,7 @@ jobs:
     if: needs.changed-files.outputs.yaml_any_changed == 'true'
     steps:
       - name: Git checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Lint YAML
         run: |
@@ -72,7 +72,7 @@ jobs:
     if: needs.changed-files.outputs.json_any_changed == 'true'
     steps:
       - name: Git checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Lint JSON
         run: |
@@ -86,7 +86,7 @@ jobs:
     if: needs.changed-files.outputs.bash_any_changed == 'true'
     steps:
       - name: Git checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Lint Bash
         run: shellcheck ${{ needs.changed-files.outputs.bash_all_changed_files }}
